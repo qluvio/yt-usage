@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import os
-import site
-site.addsitedir('/usr/local/lib/python2.7/site-packages')
+PYTHONPATH = os.environ.get('PYTHONPATH')
+site.addsitedir(PYTHONPATH)
 import google.oauth2.credentials
 
 import google_auth_oauthlib.flow
