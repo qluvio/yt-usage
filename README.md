@@ -14,6 +14,9 @@ The google-auth, google-auth-oauthlib, and google-auth-httplib2 for user authori
 pip install --upgrade google-auth google-auth-oauthlib google-auth-httplib2
 Others: pandas
 pip install --upgrade pandas
+
+Finally, you will need to set your PYTHONPATH environment variable to the site-packages directory, eg.
+PYTHONPATH=/usr/local/lib/python2.7/site-packages
     
 Setting up a project and running code samples
 
