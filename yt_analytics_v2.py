@@ -2,7 +2,8 @@
 
 import os
 import site
-site.addsitedir('/usr/local/lib/python2.7/site-packages') 
+PYTHONPATH = os.environ.get('PYTHONPATH')
+site.addsitedir(PYTHONPATH) 
 import google.oauth2.credentials
 import google_auth_oauthlib.flow
 from googleapiclient.discovery import build
@@ -68,7 +69,7 @@ if __name__ == '__main__':
               with open('viewerStat.json', 'a') as outfile:
                   json.dump(response, outfile)
 
-              print 'date:{}, video_id:{}, country:{}'.format(dt, vid, cid)
+              print 'date:{}, video_id:{}, country:{} channelID:{}'.format(dt, vid, cid, args.channelID)
               execute_api_request(
                   youtubeAnalytics.reports().query,
                   ids='channel=={}'.format(args.channelID),
