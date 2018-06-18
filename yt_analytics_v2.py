@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import os
+import site
+site.addsitedir('/usr/local/lib/python2.7/site-packages') 
 import google.oauth2.credentials
 import google_auth_oauthlib.flow
 from googleapiclient.discovery import build
@@ -12,11 +14,12 @@ import argparse
 
 SCOPES = ['https://www.googleapis.com/auth/yt-analytics.readonly',
           'https://www.googleapis.com/auth/youtube.readonly',
-          'https://www.googleapis.com/auth/yt-analytics-monetary.readonly']
+          #'https://www.googleapis.com/auth/yt-analytics-monetary.readonly'
+          ]
 
 API_SERVICE_NAME = 'youtubeAnalytics'
 API_VERSION = 'v2'
-CLIENT_SECRETS_FILE = 'client_secret_874782803140-nojrc92k5obp554jed6mr7g178upemqn.apps.googleusercontent.com.json'
+CLIENT_SECRETS_FILE = 'client_secret.json'
 def get_service():
   flow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRETS_FILE, SCOPES)
   credentials = flow.run_console()

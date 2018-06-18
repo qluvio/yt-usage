@@ -6,7 +6,8 @@
 
 import os
 import re
-
+import site
+site.addsitedir('/usr/local/lib/python2.7/site-packages')
 import google.oauth2.credentials
 import google_auth_oauthlib.flow
 from googleapiclient.discovery import build
