@@ -1,8 +1,5 @@
 # yt-usage
-Various python utilities for collecting usage data from youtube channels
-
-Overview
-This repo contains a set of python utilities that retrieves usage data for video titles on YouTube channels using the YouTube APIs.
+Various python utilities for collecting usage data from YouTube channels using the YouTube Analytics and Reporting APIs.
 
 Prerequisites
 
