@@ -77,7 +77,7 @@ cat  reports.csv | grep "^20"
 Retrieve view stats for provinces (yt_analytics_v2.py) 
 Takes a series of startDate/endDate/video IDs/country IDs/channel ID/local_file as inputs 
 Methods: youtubeAnalytics.reports().query
-python yt_analytics_v2.py  --startDate '5/10/2018' --endDate '5/11/2018'  --videoIDs ‘mgDmuzA9-iM’ ‘sBkl5Lz965o’ --countryID ‘US’ ‘CA’ --channelID ‘xx’ --local_file ‘viewerStat.json’
+python yt_analytics_v2.py  --startDate 5/10/2018 --endDate 5/11/2018  --videoIDs mgDmuzA9-iM sBkl5Lz965o --countryID US CA --channelID 'xx' --local_file viewerStat.json
 Return viewerStat.json
 
 Datasets desired
